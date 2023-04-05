@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/homeModule/HomeModule.dart';
-
+// import 'package:my_flutter_app/homeModule/HomeModule.dart';
+// import 'package:my_flutter_app/homeModule/HomeBottomNavigationBarItem.dart';
+import 'package:my_flutter_app/baseModule/FlutterTabbarWidget.dart';
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      home: HomeModule()
+      // home: HomeModule()
+      home: FlutterTabbarWidget(),
       );
   }
 }
