@@ -37,6 +37,25 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
       _currentIdx = idx;
     });
   }
+  // tabbars
+  final List<BottomNavigationBarItem> _tabbarItems = [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.list),
+      label: 'List',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.details),
+      label: 'Detail',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.explore),
+      label: 'Explore',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: 'Mine',
+    ),
+  ];
 
   @override
   void initState() {
@@ -79,24 +98,25 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
         type: BottomNavigationBarType.fixed,
         fixedColor: Colors.indigo,
         // 当item个数超过四个时，背景色为白色，类型也会改变，使用上面的属性
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'List',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.details),
-            label: 'Detail',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Mine',
-          ),
-        ],
+        items: _tabbarItems,
+        // items: const [
+        //   BottomNavigationBarItem(
+        //     icon: Icon(Icons.list),
+        //     label: 'List',
+        //   ),
+        //   BottomNavigationBarItem(
+        //     icon: Icon(Icons.details),
+        //     label: 'Detail',
+        //   ),
+        //   BottomNavigationBarItem(
+        //     icon: Icon(Icons.explore),
+        //     label: 'Explore',
+        //   ),
+        //   BottomNavigationBarItem(
+        //     icon: Icon(Icons.person),
+        //     label: 'Mine',
+        //   ),
+        // ],
       ),
       drawer: HomeLeftDrawer(),
     );

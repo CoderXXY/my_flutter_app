@@ -23,8 +23,8 @@ class HomeListView extends StatelessWidget{
       );
     }
     return ListView.builder(
-      itemCount: dataSource.length,
-        itemBuilder: _listItemBuilder
+        itemCount: dataSource.length,
+        itemBuilder: _listItemBuilder,
     );
   }
 }
