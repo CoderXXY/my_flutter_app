@@ -6,11 +6,13 @@ import 'HomeLeftDrawer.dart';
 import 'HomeBottomNavigationBarItem.dart';
 import 'package:my_flutter_app/detailModule/DetailModule.dart';
 import 'package:my_flutter_app/baseModule/FlutterAppBar.dart';
+import 'package:dio/dio.dart';
 
 class HomeModule extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    fetchHttp();
     return
       // DefaultTabController(
       //   length: 4,
@@ -60,5 +62,16 @@ class HomeModule extends StatelessWidget{
           // bottomNavigationBar: HomeTabbarWidget(),
         );
     // );
+  }
+// dio getReq
+  void fetchHttp() async{
+    try{
+      Response response;
+      const String urlStr = 'http://www.weather.com.cn/data/sk/101010100.html';
+      response = await Dio().get(urlStr);
+      return print(response);
+    }catch(err){
+      return print(err);
+    }
   }
 }
