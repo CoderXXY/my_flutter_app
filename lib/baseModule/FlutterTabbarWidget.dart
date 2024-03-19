@@ -39,7 +39,7 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
   }
   // tabbars
   final List<BottomNavigationBarItem> _tabbarItems = [
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.list),
       label: 'List',
     ),

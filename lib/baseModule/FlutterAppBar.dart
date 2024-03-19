@@ -20,14 +20,14 @@ class FlutterAppBar extends AppBar {
       title: Text(
         appBarTitle,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
             color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
       ),
       actions: showEnable ? (<Widget>[
         IconButton(
             onPressed: () =>
                 debugPrint('Navigation button search_icon is pressed'),
-            icon: Icon(Icons.search))
+            icon: const Icon(Icons.search))
       ]):null,
       backgroundColor: Colors.indigo,
     );
