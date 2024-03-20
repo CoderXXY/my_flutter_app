@@ -1,4 +1,12 @@
+import 'dart:ui';
+
+import 'package:flutter/animation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeLeftDrawer extends StatelessWidget{
   @override
@@ -25,7 +33,7 @@ class HomeLeftDrawer extends StatelessWidget{
             decoration: BoxDecoration(
               color: Colors.greenAccent,
               image: DecorationImage(
-                image: NetworkImage('https://clubimg.club.vmall.com/data/attachment/forum/201903/25/1618428drxvafuzceagv6z.jpg'),
+                image: const NetworkImage('https://clubimg.club.vmall.com/data/attachment/forum/201903/25/1618428drxvafuzceagv6z.jpg'),
                 fit: BoxFit.cover,
                 // 这个属性可以让颜色和图片结合使用，融合效果
                 colorFilter: ColorFilter.mode(
@@ -34,30 +42,30 @@ class HomeLeftDrawer extends StatelessWidget{
                 )
               )
             ),
-              accountName: Text('coderXY', style: TextStyle(fontWeight: FontWeight.bold),),
-              accountEmail: Text('coderxxy@163.com'),
-            currentAccountPicture: CircleAvatar(
+              accountName:const Text('coderxxy', style: TextStyle(fontWeight: FontWeight.bold),),
+              accountEmail: const Text('coderxxy@163.com'),
+            currentAccountPicture: const CircleAvatar(
               backgroundImage: NetworkImage('https://pic3.zhimg.com/v2-97bcf39008ea0f6ad78eb7f93cd0a91e_r.jpg'),
             ),
           ),
-          ListTile(
+          const ListTile(
             title: Text('message', textAlign: TextAlign.left,),
             leading: Icon(Icons.message, color: Colors.black12,),
           ),
-          Divider(), // 分割线
-          ListTile(
+          const Divider(), // 分割线
+          const ListTile(
             title: Text('favorite', textAlign: TextAlign.left,),
             leading: Icon(Icons.favorite, color: Colors.black12,),
           ),
-          Divider(), // 分割线
-          ListTile(
+          const Divider(), // 分割线
+          const ListTile(
             title: Text('share', textAlign: TextAlign.left,),
             leading: Icon(Icons.share, color: Colors.black12,),
           ),
-          Divider(), // 分割线
+          const Divider(), // 分割线
           ListTile(
-            title: Text('close', textAlign: TextAlign.left,),
-            leading: Icon(Icons.close, color: Colors.black12,),
+            title:const Text('close', textAlign: TextAlign.left,),
+            leading:const Icon(Icons.close, color: Colors.black12,),
             onTap: () => Navigator.pop(context), // 关闭抽屉
           ),
         ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FlutterAppBar extends AppBar {
-  final String appBarTitle;
-  final bool showEnable;
+  String appBarTitle;
+  bool showEnable;
   FlutterAppBar(this.appBarTitle, this.showEnable, {super.key});
 
   @override
