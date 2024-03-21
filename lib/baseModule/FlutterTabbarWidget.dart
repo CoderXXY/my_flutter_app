@@ -38,8 +38,8 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
     });
   }
   // tabbars
-  final List<BottomNavigationBarItem> _tabbarItems = [
-    BottomNavigationBarItem(
+  final List<BottomNavigationBarItem> _tabbarItems = const [
+     BottomNavigationBarItem(
       icon: Icon(Icons.list),
       label: 'List',
     ),
@@ -63,16 +63,16 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
     super.initState();
     // 初始化控制器
     list
-      ..add(HomeModule())
-      ..add(HomeDetailModule())
-      ..add(ExploreModule())
-      ..add(MineModule());
+      ..add(const HomeModule())
+      ..add(const HomeDetailModule())
+      ..add(const ExploreModule())
+      ..add(const MineModule());
     // 初始化导航栏标题
     _itemTitles
-      ..add(HomeModule().toString())
-      ..add(HomeDetailModule().toString())
-      ..add(ExploreModule().toString())
-      ..add(MineModule().toString());
+      ..add(const HomeModule().toString())
+      ..add(const HomeDetailModule().toString())
+      ..add(const ExploreModule().toString())
+      ..add(const MineModule().toString());
   }
   @override
   Widget build(BuildContext context) {

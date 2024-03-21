@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'HomeModel.dart';
 
@@ -12,12 +14,25 @@ class HomeListView extends StatelessWidget{
         child: Column(
           children: <Widget>[
             Image.network(dataSource[idx].imgUrl),
-            SizedBox(height: 30),
+            const SizedBox(height: 5),
             Text(
               dataSource[idx].title,
-              style: Theme.of(context).textTheme.titleMedium,
+                // style: Theme.of(context).textTheme.titleMedium
+              style: const TextStyle(
+                color: Colors.lightBlueAccent,
+                fontWeight: FontWeight.w300,
+                fontSize: 15.0,
+                shadows: [
+                  Shadow(
+                      color: Colors.black12,
+                      offset: Offset(1.5, 3),
+                      blurRadius: 0.3
+                  ),
+                ]
+              ),
+              textAlign: TextAlign.center,
             ),
-            SizedBox(width: 100)
+            const SizedBox(width: 100)
           ],
         ),
       );
