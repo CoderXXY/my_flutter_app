@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/homeModule/HomeLeftDrawer.dart';
 
 class FlutterBaseControllerWidget extends StatelessWidget{
+  const FlutterBaseControllerWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -30,7 +32,7 @@ class FlutterBaseControllerWidget extends StatelessWidget{
           actions: <Widget>[
             IconButton(
                 onPressed: ()=>debugPrint('Navigation button search_icon is pressed'),
-                icon: Icon(Icons.search)
+                icon: const Icon(Icons.search)
             )
           ],
           backgroundColor: Colors.indigo,
@@ -45,7 +47,7 @@ class FlutterBaseControllerWidget extends StatelessWidget{
         //     ]
         // ),
         // 这个组件会直接添加 drawer图标，点击图标也会触发抽屉
-        drawer: HomeLeftDrawer(),
+        drawer: const HomeLeftDrawer(),
         // bottomNavigationBar: HomeTabbarWidget(),
       ),
     );

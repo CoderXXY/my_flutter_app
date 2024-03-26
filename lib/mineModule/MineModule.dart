@@ -5,7 +5,7 @@ class MineModule extends StatelessWidget{
   const MineModule({super.key});
   @override
   Widget build(BuildContext context){
-    return Scaffold(
+    return const Scaffold(
       // appBar: AppBar(
       //   centerTitle: true,
       //   title: Text(
@@ -19,7 +19,7 @@ class MineModule extends StatelessWidget{
       //   ),
       //   backgroundColor: Colors.indigo,
       // ),
-      body: const Center(
+      body: Center(
         child:  Text('mine page'),
       ),
       drawer: HomeLeftDrawer(),

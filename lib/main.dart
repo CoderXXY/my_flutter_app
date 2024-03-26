@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       // home: HomeModule()

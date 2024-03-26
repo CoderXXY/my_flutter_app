@@ -7,6 +7,8 @@ import 'package:my_flutter_app/mineModule/MineModule.dart';
 
 
 class HomeTabbarWidget extends StatefulWidget{
+  const HomeTabbarWidget({super.key});
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -31,10 +33,10 @@ class HomeTabbarState extends State<HomeTabbarWidget>{
     // TODO: implement initState
     super.initState();
     list
-    ..add(HomeModule())
-    ..add(HomeDetailModule())
-    ..add(ExploreModule())
-    ..add(MineModule());
+    ..add(const HomeModule())
+    ..add(const HomeDetailModule())
+    ..add(const ExploreModule())
+    ..add(const MineModule());
   }
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class HomeTabbarState extends State<HomeTabbarWidget>{
       type: BottomNavigationBarType.fixed,
       fixedColor: Colors.indigo,
       // 当item个数超过四个时，背景色为白色，类型也会改变，使用上面的属性
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.list),
           label: 'List',

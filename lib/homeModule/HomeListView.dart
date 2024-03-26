@@ -1,16 +1,17 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'HomeModel.dart';
 
 class HomeListView extends StatelessWidget{
+  const HomeListView({super.key});
+
   @override
   Widget build(BuildContext context) {
     // listView cell
-    Widget _listItemBuilder(BuildContext context, int idx){
+    Widget listItemBuilder(BuildContext context, int idx){
       return Container(
         color: Colors.white,
-        margin: EdgeInsets.all(8.0),
+        margin: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
             Image.network(dataSource[idx].imgUrl),
@@ -39,7 +40,7 @@ class HomeListView extends StatelessWidget{
     }
     return ListView.builder(
         itemCount: dataSource.length,
-        itemBuilder: _listItemBuilder,
+        itemBuilder: listItemBuilder,
     );
   }
 }

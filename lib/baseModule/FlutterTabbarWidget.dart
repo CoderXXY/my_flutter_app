@@ -6,10 +6,11 @@ import 'package:my_flutter_app/homeModule/HomeModule.dart';
 import 'package:my_flutter_app/detailModule/DetailModule.dart';
 import 'package:my_flutter_app/exploreModule/ExploreModule.dart';
 import 'package:my_flutter_app/mineModule/MineModule.dart';
-import 'package:my_flutter_app/homeModule/HomeLeftDrawer.dart';
 
 
 class FlutterTabbarWidget extends StatefulWidget{
+  const FlutterTabbarWidget({super.key});
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -118,7 +119,7 @@ class FlutterTabbarWidgetState extends State<FlutterTabbarWidget>{
         //   ),
         // ],
       ),
-      drawer: HomeLeftDrawer(),
+      drawer: const HomeLeftDrawer(),
     );
   }
 }
