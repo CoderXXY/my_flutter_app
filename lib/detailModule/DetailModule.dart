@@ -24,23 +24,31 @@ class HomeDetailModule extends StatelessWidget{
       )]
     );
     const String contentStr = 'Flutter组件采用现代响应式框架构建，这是从React中获得的灵感，中心思想是用组件(widget)构建你的UI。 组件描述了在给定其当前配置和状态时他们显示的样子。当组件状态改变，组件会重构它的描述(description)，Flutter 会对比之前的描述， 以确定底层渲染树从当前状态转换到下一个状态所需要的最小更改。';
-    Scaffold scaffold = Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+    Container container = Container(
+      color: Colors.red,
+      margin: const EdgeInsets.all(0.0),
+      child: const Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            width: 300,
-            height: 300,
-            child:const Text(
-              contentStr,
-              textDirection: TextDirection.ltr,
-              style: textStyle,
-            ),
+          Text(
+            contentStr,
+            textDirection: TextDirection.ltr,
+            style: textStyle,
+          ),
+          Text(
+            contentStr,
+            textDirection: TextDirection.ltr,
+            style: textStyle,
+          ),
+          Text(
+            contentStr,
+            textDirection: TextDirection.ltr,
+            style: textStyle,
           ),
         ],
-      )
+      ),
     );
-    return scaffold;
+    return container;
     // return const Scaffold(
     //   body: Center(
     //     child: Text(
